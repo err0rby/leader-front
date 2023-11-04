@@ -1,9 +1,9 @@
-import Auth from './components/Authoriz/Auth';
+import SignIn from './components/SignIn/SignIn';
 
 function App() {
   return (
     <div className="App">
-    <Auth/>
+    <SignIn/>
     </div>
   );
 }
