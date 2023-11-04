@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useMutation } from "react-query";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./App.css";
+import "./styles.css";
 
 const SignUp = () => {
   const [login, setLogin] = useState("");
@@ -12,7 +12,7 @@ const SignUp = () => {
   const navigate = useNavigate();
   const mutation = useMutation(
     ({ login, password }) =>
-      axios.post("http://localhost:4000/auth", { login, password }).then((res) => res.data),
+      axios.post("http://localhost:3030/auth", { login, password }).then((res) => res.data),
     {
       onSuccess: (data) => {
         localStorage.setItem("token", data.token);

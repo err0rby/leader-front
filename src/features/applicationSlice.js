@@ -32,14 +32,16 @@ export const authSignUp = createAsyncThunk(
 export const authsignIn = createAsyncThunk(
   "auth/signin",
   async ({ login, password }, thunkAPI) => {
-    try {
+    console.log(login);
+      try {
       const res = await fetch("http://localhost:3030/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ login, password }),
-      });
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json",
+            },
+            
+            body: JSON.stringify({ login, password }),
+        });
       const token = await res.json();
       if (token.error) {
         return thunkAPI.rejectWithValue(token.error);

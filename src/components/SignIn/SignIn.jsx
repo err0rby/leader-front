@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { authsignIn } from "../features/applicationSlice";
-
+import { authsignIn } from "../../features/applicationSlice";
+import "./styles.css";
 const SignIn = () => {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
 
-  const error = useSelector((state) => state.application.error);
   const dispatch = useDispatch();
 
   const handleSetName = (e) => {
@@ -16,15 +15,14 @@ const SignIn = () => {
   const handleSetPass = (e) => {
     setPassword(e.target.value);
   };
+  
   const navigate = useNavigate();
   const handleSignIn = (e) => {
     e.preventDefault();
     dispatch(authsignIn({ login, password }));
     navigate("/");
   };
-  if (error) {
-    return <div>{error}</div>;
-  }
+  
   return (
     <div className="container">
       <form className="form" onSubmit={handleSignIn}>
