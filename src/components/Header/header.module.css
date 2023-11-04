@@ -1,0 +1,31 @@
+.mainBlock {
+    height: 70px;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.logoBlock {
+    width: 20%;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.appBlock {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+.authBlock {
+    width: 20%;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
