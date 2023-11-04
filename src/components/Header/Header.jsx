@@ -13,7 +13,7 @@ const Header = () => {
                 <Link to='/'>HOME</Link>
             </div>
             <div className={style.authBlock}>
-                <Link>LOG IN</Link>
+                <Link to='signin'>LOG IN</Link>
                 <Link>LOG OUT</Link>
             </div>
         </div>
